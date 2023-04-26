@@ -4,8 +4,11 @@ const $express = require('express');
 const user = require('./models/User.model')
 const db = require('./db/db.config')
 const app = $express();
+const bodyParser = require('body-parser');
 const userRoutes = require('./routes/user.routes');
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.get('/', (req:any, res:any) => {
   
 });

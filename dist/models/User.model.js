@@ -14,9 +14,9 @@ exports.User = sequelize.define('User', {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-        validate: {
-            is: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/ // Regex para CPF
-        }
+        // validate: {
+        //   is: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/ // Regex para CPF
+        // }
     },
     email: {
         type: DataTypes.STRING,
